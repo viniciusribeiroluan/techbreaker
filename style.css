@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    --verde: #00674F;
+    --branco:#FFFFFF;
+    --preto: #000000;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Libre Caslon Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
