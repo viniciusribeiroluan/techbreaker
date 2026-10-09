@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
     <title>
         TECHBREAKER - CYBERSEGURADORAS
     </title>
 </head>
 <style>
-     .PlanoStart {
+     main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+     }
+     .titulo-secao {
+      width: 100%;
+      text-align: center;
+     }
+
+     .PlanoStart, .PlanoGold, .PlanoPlatinum, .PlanoProfissional, .PlanoMaster {
       background: #ffffff;
       border: 1px solid #e0e0e0;
       border-radius: 12px;
@@ -17,42 +29,19 @@
       width: 320px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
-    .PlanoGold {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .PlanoPlatinum {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .PlanoProfissional {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .PlanoMaster {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+    .btn-adquirir {
+      margin-top: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 6px;
     }
 </style>
 <body>
@@ -70,14 +59,23 @@
         
     </div>
     <main>
-        <h2>
-            Planos
-        </h2>
+        <div class="titulo-secao">
+            <h1>"Segurança vosso lema"</h1>
+            <br>
+            <h2>Planos</h2>
+        </div>
+
         <div class="PlanoStart">
             <h3>
                 Plano Ferro
             </h3>
             <p>R$ 280</p>
+            <li>Verredura de Vulnerabilidades</li>
+            <li>Firewall Gerenciado</li>
+            <li>Treino Anti-Phishing</li>
+            <li>Proteção de Endpoints</li>
+            <li>Relatórios Mensais</li>
+            <button class="btn-adquirir">Adquirir plano</button>
         </div>
         <div class="PlanoGold">
             <h3>
@@ -86,6 +84,12 @@
             <p>
                 R$ 530
             </p>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <button class="btn-adquirir">Adquirir plano</button>
         </div>
         <div class="PlanoPlatinum">
             <h3>
@@ -94,6 +98,12 @@
             <p>
                 R$ 780
             </p>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <button class="btn-adquirir">Adquirir plano</button>
         </div>
         <div class="PlanoProfissional">
             <h3>
@@ -102,6 +112,12 @@
             <p>
                 R$ 990
             </p>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <button class="btn-adquirir">Adquirir plano</button>
         </div>
         <div class="PlanoMaster">
             <h3>
@@ -110,6 +126,12 @@
             <p>
                 R$ 1.300
             </p>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <button class="btn-adquirir">Adquirir plano</button>
         </div>
     </main>
 </body>
