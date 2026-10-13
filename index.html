@@ -1,138 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>
-        TECHBREAKER - CYBERSEGURADORAS
-    </title>
+    <title>TECHBREAKER - CYBERSEGURADORAS</title>
 </head>
-<style>
-     main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-     }
-     .titulo-secao {
-      width: 100%;
-      text-align: center;
-     }
-
-     .PlanoStart, .PlanoGold, .PlanoPlatinum, .PlanoProfissional, .PlanoMaster {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .btn-adquirir {
-      margin-top: 15px;
-      padding: 10px 20px;
-      cursor: pointer;
-      border: 1px solid #ccc;
-      background: #fff;
-      border-radius: 6px;
-    }
-</style>
 <body>
-    <header>
-        <center>
-            <h1>
-                TECHBREAKER
-            </h1>
-            <h2>
-                CYBERSEGURADORAS
-            </h2>    
-        </center>
+    <header class="site-header">
+        <div class="header-container">
+            <h1>TECHBREAKER</h1>
+            <p class="tagline">"Segurança vosso lema"</p>
+            <nav class="site-nav">
+                <a href="index.html">Planos</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="pontos.html">Pontos Fortes e Fracos</a>
+            </nav>
+        </div>
     </header>
-    <div>
-        
-    </div>
+
     <main>
         <div class="titulo-secao">
-            <h1>"Segurança vosso lema"</h1>
-            <br>
-            <h2>Planos</h2>
+            <h1>Nossos Planos de Blindagem</h1>
+            <h2>Soluções customizadas em cibersegurança para o mercado de seguros</h2>
         </div>
 
-        <div class="PlanoStart">
-            <h3>
-                Plano Ferro
-            </h3>
-            <p>R$ 280</p>
-            <li>Verredura de Vulnerabilidades</li>
-            <li>Firewall Gerenciado</li>
-            <li>Treino Anti-Phishing</li>
-            <li>Proteção de Endpoints</li>
-            <li>Relatórios Mensais</li>
-            <button class="btn-adquirir">Adquirir plano</button>
-        </div>
-        <div class="PlanoGold">
-            <h3>
-                Plano Prata
-            </h3>
-            <p>
-                R$ 530
-            </p>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <button class="btn-adquirir">Adquirir plano</button>
-        </div>
-        <div class="PlanoPlatinum">
-            <h3>
-                Plano Platina
-            </h3>
-            <p>
-                R$ 780
-            </p>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <button class="btn-adquirir">Adquirir plano</button>
-        </div>
-        <div class="PlanoProfissional">
-            <h3>
-                Plano Ascendente
-            </h3>
-            <p>
-                R$ 990
-            </p>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <button class="btn-adquirir">Adquirir plano</button>
-        </div>
-        <div class="PlanoMaster">
-            <h3>
-                Plano Radiante
-            </h3>
-            <p>
-                R$ 1.300
-            </p>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <button class="btn-adquirir">Adquirir plano</button>
+        <div class="planos-grid">
+            <div class="PlanoStart">
+                <h3>Plano Ferro</h3>
+                <p class="preco">R$ 280<span>/mês</span></p>
+                <ul>
+                    <li>Varredura de Vulnerabilidades</li>
+                    <li>Firewall Gerenciado</li>
+                    <li>Treinamento Anti-Phishing</li>
+                    <li>Proteção de Endpoints</li>
+                    <li>Relatórios Mensais</li>
+                </ul>
+                <button class="btn-adquirir">Adquirir plano</button>
+            </div>
+            
+            <div class="PlanoGold">
+                <h3>Plano Prata</h3>
+                <p class="preco">R$ 530<span>/mês</span></p>
+                <ul>
+                    <li>Criptografia de Dados</li>
+                    <li>Monitoramento 8x5</li>
+                    <li>Análise de Terceiros</li>
+                    <li>Adequação Regulatória</li>
+                    <li>Resposta a Incidentes</li>
+                </ul>
+                <button class="btn-adquirir">Adquirir plano</button>
+            </div>
+            
+            <div class="PlanoPlatinum">
+                <h3>Plano Platina</h3>
+                <p class="preco">R$ 780<span>/mês</span></p>
+                <ul>
+                    <li>SOC 24/7</li>
+                    <li>MDR (Detecção e Resposta)</li>
+                    <li>Gestão de Identidade (IAM)</li>
+                    <li>Simulação de Ataques</li>
+                    <li>Backup Imutável</li>
+                </ul>
+                <button class="btn-adquirir">Adquirir plano</button>
+            </div>
+            
+            <div class="PlanoProfissional">
+                <h3>Plano Ascendente</h3>
+                <p class="preco">R$ 990<span>/mês</span></p>
+                <ul>
+                    <li>Inteligência de Ameaças</li>
+                    <li>Segurança em Nuvem</li>
+                    <li>Análise de Fraudes Digitais</li>
+                    <li>Pentest Anual</li>
+                    <li>Isolamento de Redes (Zero Trust)</li>
+                </ul>
+                <button class="btn-adquirir">Adquirir plano</button>
+            </div>
+            
+            <div class="PlanoMaster">
+                <h3>Plano Radiante</h3>
+                <p class="preco">R$ 1.300<span>/mês</span></p>
+                <ul>
+                    <li>CISO as a Service</li>
+                    <li>Resposta Ultra-Rápida</li>
+                    <li>Auditoria de Compliance</li>
+                    <li>Blindagem de APIs</li>
+                    <li>Simulações de Crise</li>
+                </ul>
+                <button class="btn-adquirir">Adquirir plano</button>
+            </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechBreaker Cyberseguradoras. Todos os direitos reservados. | "Segurança vosso lema"</p>
+    </footer>
 </body>
 </html>

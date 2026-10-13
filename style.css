@@ -1,14 +1,311 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
 
-:root{
+:root {
     --verde: #00674F;
-    --branco:#FFFFFF;
-    --preto: #000000;
+    --verde-escuro: #004233;
+    --verde-claro: #008f6e;
+    --branco: #FFFFFF;
+    --cinza-fundo: #F4F7F6;
+    --cinza-borda: #D2DCD9;
+    --preto: #111111;
 }
+
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Libre Caslon Condensed", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+body {
+    background-color: var(--cinza-fundo);
+    color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Global Uniforme */
+.site-header {
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.header-container .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.site-nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.site-nav a:hover {
+    opacity: 0.8;
+    border-bottom-color: var(--branco);
+}
+
+/* Main Layout Global */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.titulo-secao {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-secao h1 {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 8px;
+}
+
+.titulo-secao h2 {
+    font-size: 1.3rem;
+    color: #555;
+    font-weight: normal;
+}
+
+/* Planos Grid */
+.planos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.PlanoStart, .PlanoGold, .PlanoPlatinum, .PlanoProfissional, .PlanoMaster {
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-top: 5px solid var(--verde);
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.PlanoStart:hover, .PlanoGold:hover, .PlanoPlatinum:hover, .PlanoProfissional:hover, .PlanoMaster:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 103, 79, 0.15);
+}
+
+.PlanoStart h3, .PlanoGold h3, .PlanoPlatinum h3, .PlanoProfissional h3, .PlanoMaster h3 {
+    font-size: 1.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 20px;
+}
+
+.preco span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.PlanoStart ul, .PlanoGold ul, .PlanoPlatinum ul, .PlanoProfissional ul, .PlanoMaster ul {
+    list-style-type: none;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.PlanoStart li, .PlanoGold li, .PlanoPlatinum li, .PlanoProfissional li, .PlanoMaster li {
+    font-size: 1.05rem;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+    color: #333;
+}
+
+.btn-adquirir {
+    margin-top: 15px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border: none;
+    background: var(--verde);
+    color: var(--branco);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-adquirir:hover {
+    background: var(--verde-escuro);
+}
+
+/* Página Sobre */
+.sobre-main {
+    max-width: 850px;
+}
+
+.sobre-container {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--cinza-borda);
+    text-align: left;
+}
+
+.sobre-container h2 {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre-container h3 {
+    font-size: 1.5rem;
+    color: var(--verde);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sobre-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.lista-move {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.lista-move li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/* Página Pontos Fortes e Fracos */
+.analise-grid {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-analise {
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 550px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--cinza-borda);
+}
+
+.card-analise.forte {
+    border-top: 5px solid var(--verde);
+}
+
+.card-analise.fraco {
+    border-top: 5px solid #C0392B;
+}
+
+.card-analise h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-analise.forte h3 {
+    color: var(--verde);
+}
+
+.card-analise.fraco h3 {
+    color: #C0392B;
+}
+
+.card-analise ul {
+    list-style: none;
+}
+
+.card-analise li {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.card-analise li:last-child {
+    border-bottom: none;
+}
+
+.card-analise strong {
+    color: var(--preto);
+}
+
+/* Footer Global Uniforme */
+.site-footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    font-size: 1.05rem;
+    margin-top: auto;
 }
