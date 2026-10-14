@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TECHBREAKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-principal">
+        <div class="logo-area">
+            <h1>TECHBREAKER</h1>
+            <h2>CYBERSEGURADORAS</h2>
+        </div>
+        <nav class="menu-navegacao">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contato.html" class="active">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container-conteudo">
+        <div class="titulo-secao">
+            <h2>Entre em contacto connosco</h2>
+            <p>Estamos prontos para proteger a sua infraestrutura e garantir total resiliência digital.</p>
+        </div>
+
+        <div class="grid-contato">
+            <!-- Cartão com Informações de Contacto -->
+            <div class="card-info">
+                <h3>Nossos Contactos</h3>
+                <p><strong>Email:</strong> contato.techbreaker@gmail.com</p>
+                <p><strong>Telefone:</strong> (41) 99999-1234</p>
+                <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
+                <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 07h às 18h</p>
+            </div>
+
+            <!-- Formulário de Mensagem -->
+            <form class="form-contato" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                <h3>Envie uma mensagem</h3>
+                
+                <div class="campo-form">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" id="email" placeholder="seuemail@empresa.com" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar a sua seguradora?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer-principal">
+        <p>© 2026 TechBreaker Cyberseguradoras - Segurança máxima para o seu negócio.</p>
+    </footer>
+</body>
+</html>
