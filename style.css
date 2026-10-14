@@ -2,12 +2,11 @@
 
 :root {
     --verde: #00674F;
-    --verde-escuro: #004233;
-    --verde-claro: #008f6e;
+    --verde-escuro: #004d3b;
     --branco: #FFFFFF;
-    --cinza-fundo: #F4F7F6;
-    --cinza-borda: #D2DCD9;
-    --preto: #111111;
+    --cinza-fundo: #F4F6F5;
+    --cinza-borda: #E0E0E0;
+    --preto: #1A1A1A;
 }
 
 * {
@@ -27,58 +26,51 @@ body {
     min-height: 100vh;
 }
 
-/* Header Global Uniforme */
-.site-header {
+/* --- HEADER UNIFICADO --- */
+.header-principal {
     background-color: var(--verde);
     color: var(--branco);
-    padding: 25px 20px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.header-container h1 {
+.header-principal h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
-    margin-bottom: 5px;
 }
 
-.header-container .tagline {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 15px;
+.header-principal h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 4px;
     opacity: 0.9;
 }
 
-.site-nav {
+.menu-navegacao {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
+    gap: 20px;
 }
 
-.site-nav a {
+.menu-navegacao a {
     color: var(--branco);
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: opacity 0.2s;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
+    font-size: 1.2rem;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.site-nav a:hover {
-    opacity: 0.8;
-    border-bottom-color: var(--branco);
+.menu-navegacao a:hover,
+.menu-navegacao a.active {
+    background-color: var(--verde-escuro);
 }
 
-/* Main Layout Global */
+/* --- ESTRUTURA GERAL E LAYOUT --- */
 main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -87,225 +79,178 @@ main {
 .titulo-secao {
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.titulo-secao h1 {
-    font-size: 2rem;
-    color: var(--verde-escuro);
-    margin-bottom: 8px;
+.titulo-secao h1, .titulo-secao h2 {
+    color: var(--verde);
 }
 
-.titulo-secao h2 {
-    font-size: 1.3rem;
-    color: #555;
-    font-weight: normal;
-}
-
-/* Planos Grid */
-.planos-grid {
+/* --- PLANOS (INDEX.HTML) --- */
+.container-planos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
-    width: 100%;
+    gap: 20px;
+    padding: 30px 20px;
 }
 
 .PlanoStart, .PlanoGold, .PlanoPlatinum, .PlanoProfissional, .PlanoMaster {
     background: var(--branco);
     border: 1px solid var(--cinza-borda);
-    border-top: 5px solid var(--verde);
     border-radius: 12px;
     padding: 30px 20px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .PlanoStart:hover, .PlanoGold:hover, .PlanoPlatinum:hover, .PlanoProfissional:hover, .PlanoMaster:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(0, 103, 79, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .PlanoStart h3, .PlanoGold h3, .PlanoPlatinum h3, .PlanoProfissional h3, .PlanoMaster h3 {
-    font-size: 1.5rem;
-    color: var(--verde-escuro);
+    color: var(--verde);
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 
 .preco {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: var(--verde);
+    margin-bottom: 15px;
+    color: var(--preto);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
     margin-bottom: 20px;
-}
-
-.preco span {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.PlanoStart ul, .PlanoGold ul, .PlanoPlatinum ul, .PlanoProfissional ul, .PlanoMaster ul {
-    list-style-type: none;
     text-align: left;
     width: 100%;
-    margin-bottom: 20px;
-    padding-left: 10px;
 }
 
-.PlanoStart li, .PlanoGold li, .PlanoPlatinum li, .PlanoProfissional li, .PlanoMaster li {
+ul li {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--cinza-borda);
     font-size: 1.05rem;
-    padding: 5px 0;
-    border-bottom: 1px dashed #eee;
-    color: #333;
 }
 
-.btn-adquirir {
+.btn-adquirir, .btn-enviar {
+    display: inline-block;
     margin-top: 15px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     cursor: pointer;
     border: none;
     background: var(--verde);
     color: var(--branco);
-    font-size: 1.1rem;
-    font-weight: bold;
     border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
     width: 100%;
-    transition: background 0.2s;
 }
 
-.btn-adquirir:hover {
-    background: var(--verde-escuro);
+.btn-adquirir:hover, .btn-enviar:hover {
+    background-color: var(--verde-escuro);
 }
 
-/* Página Sobre */
-.sobre-main {
-    max-width: 850px;
+/* --- CONTEÚDO E SOBRE NÓS (SOBRE.HTML) --- */
+.container-conteudo {
+    padding: 40px 20px;
 }
 
-.sobre-container {
+.secao-texto {
     background: var(--branco);
-    padding: 40px;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     border: 1px solid var(--cinza-borda);
-    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.sobre-container h2 {
-    font-size: 2rem;
-    color: var(--verde-escuro);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.sobre-container h3 {
-    font-size: 1.5rem;
+.secao-texto h2, .secao-texto h3 {
     color: var(--verde);
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.lead-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.sobre-container p {
-    font-size: 1.1rem;
+.secao-texto p {
+    font-size: 1.15rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    color: #444;
 }
 
-.lista-move {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.lista-move li {
+.lista-valores li {
     font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    color: #444;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-/* Página Pontos Fortes e Fracos */
-.analise-grid {
+/* --- PÁGINA DE CONTACTO (CONTATO.HTML) --- */
+.grid-contato {
     display: flex;
-    gap: 30px;
-    width: 100%;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
 }
 
-.card-analise {
+.card-info, .form-contato {
     background: var(--branco);
+    border: 1px solid var(--cinza-borda);
     border-radius: 12px;
     padding: 30px;
     flex: 1;
-    min-width: 320px;
-    max-width: 550px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 1px solid var(--cinza-borda);
+    min-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.card-analise.forte {
-    border-top: 5px solid var(--verde);
-}
-
-.card-analise.fraco {
-    border-top: 5px solid #C0392B;
-}
-
-.card-analise h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.card-analise.forte h3 {
+.card-info h3, .form-contato h3 {
     color: var(--verde);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
-.card-analise.fraco h3 {
-    color: #C0392B;
+.card-info p {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
 }
 
-.card-analise ul {
-    list-style: none;
+.campo-form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-analise li {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    color: #444;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 12px;
-}
-
-.card-analise li:last-child {
-    border-bottom: none;
-}
-
-.card-analise strong {
+.campo-form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
     color: var(--preto);
 }
 
-/* Footer Global Uniforme */
-.site-footer {
+.campo-form input, .campo-form textarea {
+    padding: 10px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-form input:focus, .campo-form textarea:focus {
+    border-color: var(--verde);
+}
+
+/* --- FOOTER UNIFICADO --- */
+.footer-principal {
     background-color: var(--verde-escuro);
     color: var(--branco);
     text-align: center;
     padding: 20px;
-    font-size: 1.05rem;
     margin-top: auto;
+    font-size: 1rem;
 }
